@@ -14,7 +14,7 @@ app.use(session({
     cookie: { secure: process.env.NODE_ENV === 'production' }
 }));
 
-const SECRET_PIN = process.env.SECRET_PIN;
+const SECRET_PIN = process.env.SECRET_PIN || '2305';
 
 // Routes
 app.post('/api/verify', (req, res) => {
